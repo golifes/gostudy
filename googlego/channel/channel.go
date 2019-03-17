@@ -24,6 +24,14 @@ func chanDemo() {
 	time.Sleep(time.Millisecond)
 }
 
+func bufferedChannel() {
+	c := make(chan int, 3)
+	c <- 1
+	c <- 2
+	c <- 3
+	c <- 4
+}
 func main() {
-	chanDemo()
+	bufferedChannel()
+	//chanDemo()
 }
