@@ -1,0 +1,8 @@
+10.2.1中
+func NewFile(fd int, name string) *File {
+    if fd < 0 {
+        return nil
+    }
+
+    return &File(fd, name)
+}这里有错误 应该是return &File{fd,name}
